@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Contact;
+use App\Models\sideInfo;
 use Illuminate\Http\Request;
 
-class ContactController extends Controller
+class SideInfoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,34 +35,16 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $name = $request->name;
-        $phone = $request->phone;
-        $msg = $request->message;
-
-        date_default_timezone_set("Asia/Dhaka");
-        $visitTime = date("h:i:sa");
-        $visitDate = date("d-m-Y");
-
-        $result = Contact::insert([
-            'name' => $name,
-            'phone' => $phone,
-            'message' => $msg,
-            'contact_date' => $visitDate,
-            'contact_time' => $visitTime
-          ]);
-
-          return response()->json(['status'=> 200]);
-       
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Contact  $contact
+     * @param  \App\Models\sideInfo  $sideInfo
      * @return \Illuminate\Http\Response
      */
-    public function show(Contact $contact)
+    public function show(sideInfo $sideInfo)
     {
         //
     }
@@ -70,10 +52,10 @@ class ContactController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Contact  $contact
+     * @param  \App\Models\sideInfo  $sideInfo
      * @return \Illuminate\Http\Response
      */
-    public function edit(Contact $contact)
+    public function edit(sideInfo $sideInfo)
     {
         //
     }
@@ -82,10 +64,10 @@ class ContactController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Contact  $contact
+     * @param  \App\Models\sideInfo  $sideInfo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Contact $contact)
+    public function update(Request $request, sideInfo $sideInfo)
     {
         //
     }
@@ -93,10 +75,10 @@ class ContactController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Contact  $contact
+     * @param  \App\Models\sideInfo  $sideInfo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Contact $contact)
+    public function destroy(sideInfo $sideInfo)
     {
         //
     }
